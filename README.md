@@ -47,14 +47,22 @@ Add the following line:
 127.0.0.1   rocket9-vue.local
 ```
 
-### 5. Visit the Vue.js application at `http://rocket9-vue.local`
+### 5. Visit the Vue.js application at `http://rocket9-vue.local:5173`
 ```
 visit http://rocket9-vue.local
 ```
 
+### 12. Change HTTP Port if Needed
+
+If port 5173 is already in use (e.g., by an another application), you can change the HTTP port
+HOST_MACHINE_UNSECURE_HOST_PORT in the .env file in the rocket9-vue-docker-compose folder
+
 #### Other commands
 ```
-docker compose down
 docker compose stop
+docker compose start
+docker compose down
 docker compose up -d
+docker compose exec vue bash
+docker compose build --no-cache
 ```

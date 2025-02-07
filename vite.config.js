@@ -16,6 +16,11 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ['rocket9-vue.local']
+    watch: {
+      usePolling: true,
+    },
+    host: true,
+    strictPort: true,
+    allowedHosts: ['rocket9-vue.local', 'localhost']
   }
 })
