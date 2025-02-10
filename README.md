@@ -57,6 +57,13 @@ visit http://rocket9-vue.local
 If port 5173 is already in use (e.g., by an another application), you can change the HTTP port
 HOST_MACHINE_UNSECURE_HOST_PORT in the .env file in the rocket9-vue-docker-compose folder
 
+### 13. Json Server
+
+Yom must run server in the 'vue' container
+```
+npm run server
+```
+
 #### Other commands
 ```
 docker compose stop
