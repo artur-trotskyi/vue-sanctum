@@ -73,3 +73,6 @@ docker compose up -d
 docker compose exec vue bash
 docker compose build --no-cache
 ```
+
+- https://github.com/bradtraversy/vue-crash-2024
+- https://www.youtube.com/watch?v=VeNfHj6MhgA
