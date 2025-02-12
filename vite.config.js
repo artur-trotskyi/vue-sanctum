@@ -22,10 +22,20 @@ export default defineConfig({
     host: true,
     strictPort: true,
     proxy: {
-      '/api': {
+      '/api/jobs': {
         target: 'http://localhost:5000',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+      '/api/auth': {
+        target: 'http://laravel-sanctum-vue.local',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+      '/sanctum/csrf-cookie': {
+        target: 'http://laravel-sanctum-vue.local',
+        changeOrigin: true,
+        secure: false,
       },
     },
     allowedHosts: ['laravel-sanctum-vue.local', 'localhost']

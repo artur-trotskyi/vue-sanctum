@@ -1,6 +1,14 @@
 <script setup>
 import {RouterLink, useRoute} from "vue-router";
 import logo from "@/assets/img/logo.png";
+import {defineProps} from "vue";
+
+defineProps({
+  user: {
+    type: Object,
+    default: {}
+  },
+});
 
 const isActiveLink = (routePath) => {
   const route = useRoute();
@@ -55,6 +63,19 @@ const isActiveLink = (routePath) => {
                               'rounded-md',
                           ]"
               >Add Job
+              </RouterLink>
+              <RouterLink to="/"
+                          :class="[
+                              isActiveLink('/logout')
+                              ? 'bg-green-900'
+                              : 'hover:bg-gray-900 hover:text-white',
+                              'text-white',
+                              'px-3',
+                              'py-2',
+                              'rounded-md',
+                          ]"
+              >
+                {{ user.name }}
               </RouterLink>
             </div>
           </div>
