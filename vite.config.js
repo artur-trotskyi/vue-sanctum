@@ -28,6 +28,6 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
-    allowedHosts: ['rocket9-vue.local', 'localhost']
+    allowedHosts: ['laravel-sanctum-vue.local', 'localhost']
   }
 })
