@@ -34,7 +34,15 @@ Launch Bash in the `vue` container:
 docker compose exec vue bash
 ```
 
-### 4. Configure Hosts File on Host Machine
+### 4. Run Project and Json Server
+
+Yom must run server in the 'vue' container
+```
+npm run dev
+npm run server
+```
+
+### 5. Configure Hosts File on Host Machine
 
 Open `/etc/hosts`:
 
@@ -47,19 +55,12 @@ Add the following line:
 127.0.0.1   laravel-sanctum-vue.local
 ```
 
-### 5. Visit the Vue.js application at `http://laravel-sanctum-vue.local:5173`
+### 6. Visit the Vue.js application at `http://laravel-sanctum-vue.local:5173`
 
-### 12. Change HTTP Port if Needed
+### 7. Change HTTP Port if Needed
 
 If port 5173 is already in use (e.g., by an another application), you can change the HTTP port
 HOST_MACHINE_UNSECURE_HOST_PORT in the .env file in the vue-sanctum-docker-compose folder
-
-### 13. Json Server
-
-Yom must run server in the 'vue' container
-```
-npm run server
-```
 
 #### Other commands
 ```
