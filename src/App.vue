@@ -13,7 +13,7 @@ const {authenticated, user} = useAuth()
     <div class="relative">
       <Navbar :user="user"/>
       <RouterView/>
-      <LoginForm v-if="!authenticated"/>
+      <!-- <LoginForm v-if="!authenticated"/>-->
     </div>
   </div>
 </template>
